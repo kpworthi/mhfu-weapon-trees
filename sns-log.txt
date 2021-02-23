@@ -1,0 +1,654 @@
+2021-02-22 16:54:55,861 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Sword_and_Shields
+2021-02-22 16:54:57,464 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Black_Sword
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 16:55:02,202 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Daora%27s_Maelstrom
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 16:55:02,562 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Daora%27s_Razor
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 16:55:06,697 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Eternal_Replica
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 16:55:08,108 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Feather_Knife_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 16:55:08,445 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Feather_Sword_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 16:55:13,016 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Hi_Feather_Sword_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 16:55:20,177 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/User_blog:Lord_Loss/Discussion_of_the_Week:_MHFU_-_Best_Looking_Weapons
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 16:55:22,916 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Template:MHFUSNSWep
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 16:55:25,021 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Ninja_Sword
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 16:55:30,993 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Rusted_Replica
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 16:55:36,906 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Steel_Ice_Dagger
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 16:55:37,344 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Steel_Ice_Dagger%2B
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 16:55:41,553 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/True_Black_Ruiner_Sword
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 16:55:41,866 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Twin_Shells_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 16:57:00,154 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Sword_and_Shields
+2021-02-22 17:02:23,222 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Sword_and_Shields
+2021-02-22 17:02:24,845 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Black_Sword
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 17:02:27,104 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Daora%27s_Maelstrom
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 17:02:27,221 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Daora%27s_Razor
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 17:02:29,027 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Eternal_Replica
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 17:02:29,679 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Feather_Knife_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 17:02:29,819 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Feather_Sword_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 17:02:31,815 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Hi_Feather_Sword_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 17:02:35,212 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/User_blog:Lord_Loss/Discussion_of_the_Week:_MHFU_-_Best_Looking_Weapons
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 17:02:36,268 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Template:MHFUSNSWep
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 17:02:37,206 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Ninja_Sword
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 17:02:40,088 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Rusted_Replica
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 17:02:42,522 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Steel_Ice_Dagger
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 17:02:42,640 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Steel_Ice_Dagger%2B
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 17:02:44,517 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/True_Black_Ruiner_Sword
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 17:02:44,652 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Twin_Shells_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 77, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 37, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+
+
+
+2021-02-22 17:11:59,981 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Sword_and_Shields
+
+2021-02-22 17:12:01,618 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Black_Sword
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 78, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 38, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+
+2021-02-22 17:12:03,853 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Daora%27s_Maelstrom
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 78, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 38, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+
+2021-02-22 17:12:03,975 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Daora%27s_Razor
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 78, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 38, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+
+2021-02-22 17:12:05,784 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Eternal_Replica
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 78, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 38, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+
+2021-02-22 17:12:06,470 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Feather_Knife_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 78, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 38, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+
+2021-02-22 17:12:06,630 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Feather_Sword_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 78, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 38, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+
+2021-02-22 17:12:08,537 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Hi_Feather_Sword_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 78, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 38, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+
+2021-02-22 17:12:13,830 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Ninja_Sword
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 78, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 38, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+
+2021-02-22 17:12:16,656 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Rusted_Replica
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 78, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 38, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+
+2021-02-22 17:12:19,088 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Steel_Ice_Dagger
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 78, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 38, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+
+2021-02-22 17:12:19,216 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Steel_Ice_Dagger%2B
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 78, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 38, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+
+2021-02-22 17:12:21,076 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/True_Black_Ruiner_Sword
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 78, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 38, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+
+2021-02-22 17:12:21,201 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Twin_Shells_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 78, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper.py", line 38, in compile_info
+    tables = [mhfu_span.parent.next_sibling.next_sibling, mhfu_span.parent.next_sibling.next_sibling.next_sibling.next_sibling]
+AttributeError: 'NoneType' object has no attribute 'parent'
+2021-02-22 21:04:31,938 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:04:32,279 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 75, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 37, in compile_info
+    "name": soup.find(attrs={"data-source": "Name"}).get_text(strip=True),
+AttributeError: 'NoneType' object has no attribute 'get_text'
+2021-02-22 21:06:31,575 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:06:31,791 INFO:Reading: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+2021-02-22 21:06:31,927 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 75, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 37, in compile_info
+    "name": soup.find(attrs={"data-source": "Name"}).get_text(strip=True),
+AttributeError: 'NoneType' object has no attribute 'get_text'
+2021-02-22 21:07:02,787 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:07:02,981 INFO:Reading: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+2021-02-22 21:07:03,115 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 76, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 37, in compile_info
+    "name": soup.find(attrs={"data-source": "Name"}).get_text(strip=True),
+AttributeError: 'NoneType' object has no attribute 'get_text'
+2021-02-22 21:08:12,049 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:08:12,383 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 75, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 37, in compile_info
+    "name": soup.find(attrs={"data-source": "Name"}).get_text(strip=True),
+AttributeError: 'NoneType' object has no attribute 'get_text'
+2021-02-22 21:08:18,312 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:08:18,639 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 75, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 37, in compile_info
+    "name": soup.find(attrs={"data-source": "Name"}).get_text(strip=True),
+AttributeError: 'NoneType' object has no attribute 'get_text'
+2021-02-22 21:08:39,096 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:10:17,900 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 75, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 37, in compile_info
+    "name": soup.find(attrs={"data-source": "Name"}).get_text(strip=True),
+AttributeError: 'NoneType' object has no attribute 'get_text'
+2021-02-22 21:11:41,258 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:21:58,258 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:25:36,116 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:25:36,494 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 75, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 49, in compile_info
+    "upgrade-from": soup.find_all(attrs={"data-source": "Upgraded From"})[1].find(class_="pi-data-value pi-font").get_text(strip=True),
+AttributeError: 'NoneType' object has no attribute 'get_text'
+2021-02-22 21:27:10,998 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:27:11,743 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 75, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 49, in compile_info
+    "upgrade-from": soup.find_all(attrs={"data-source": "Upgraded From"})[1].find(class_="pi-data-value pi-font").get_text(strip=True),
+AttributeError: 'NoneType' object has no attribute 'get_text'
+2021-02-22 21:27:38,640 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:28:42,662 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 75, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 49, in compile_info
+    "upgrade-from": soup.find_all(attrs={"data-source": "Upgraded From"})[1].find(class_="pi-data-value pi-font").get_text(strip=True),
+AttributeError: 'NoneType' object has no attribute 'get_text'
+2021-02-22 21:29:10,489 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:40:08,289 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:40:08,671 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 85, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 59, in compile_info
+    current_weapon["upgrade-to"].push( weapon.get_text(strip=True) )
+AttributeError: 'list' object has no attribute 'push'
+2021-02-22 21:40:29,362 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:40:29,754 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 85, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 56, in compile_info
+    if weapon["class"] == "":
+  File "C:\Python38\lib\site-packages\bs4\element.py", line 1406, in __getitem__
+    return self.attrs[key]
+KeyError: 'class'
+2021-02-22 21:40:44,388 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:40:44,763 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 85, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 56, in compile_info
+    if weapon["class"] == "":
+  File "C:\Python38\lib\site-packages\bs4\element.py", line 1406, in __getitem__
+    return self.attrs[key]
+KeyError: 'class'
+2021-02-22 21:40:48,319 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:40:48,700 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 85, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 56, in compile_info
+    if weapon["class"] == "":
+  File "C:\Python38\lib\site-packages\bs4\element.py", line 1406, in __getitem__
+    return self.attrs[key]
+KeyError: 'class'
+2021-02-22 21:40:52,818 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:40:53,195 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 85, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 56, in compile_info
+    if weapon["class"] == "":
+  File "C:\Python38\lib\site-packages\bs4\element.py", line 1406, in __getitem__
+    return self.attrs[key]
+KeyError: 'class'
+2021-02-22 21:41:06,338 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:47:55,672 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 85, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 56, in compile_info
+    if weapon["class"] == ["image"]:
+  File "C:\Python38\lib\site-packages\bs4\element.py", line 1406, in __getitem__
+    return self.attrs[key]
+KeyError: 'class'
+2021-02-22 21:47:58,830 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:47:59,237 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 85, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 56, in compile_info
+    if weapon["class"] == ["image"]:
+  File "C:\Python38\lib\site-packages\bs4\element.py", line 1406, in __getitem__
+    return self.attrs[key]
+KeyError: 'class'
+2021-02-22 21:48:19,179 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:48:19,573 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 85, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 56, in compile_info
+    if weapon["class"] == "image":
+  File "C:\Python38\lib\site-packages\bs4\element.py", line 1406, in __getitem__
+    return self.attrs[key]
+KeyError: 'class'
+2021-02-22 21:48:37,800 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:48:38,168 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 85, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 56, in compile_info
+    if weapon.a["class"] == "image":
+TypeError: 'NoneType' object is not subscriptable
+2021-02-22 21:48:46,333 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:48:46,705 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 85, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 56, in compile_info
+    if weapon.a["class"] == ["image"]:
+TypeError: 'NoneType' object is not subscriptable
+2021-02-22 21:49:03,234 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:49:03,618 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 85, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 56, in compile_info
+    if weapon["class"] == ["image"]:
+  File "C:\Python38\lib\site-packages\bs4\element.py", line 1406, in __getitem__
+    return self.attrs[key]
+KeyError: 'class'
+2021-02-22 21:50:42,344 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:50:42,731 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 87, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 57, in compile_info
+    print(weapon.a["class"])
+TypeError: 'NoneType' object is not subscriptable
+2021-02-22 21:50:57,876 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:50:58,272 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 87, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 57, in compile_info
+    print(weapon.a["class"])
+TypeError: 'NoneType' object is not subscriptable
+2021-02-22 21:51:19,045 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:51:19,470 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 87, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 57, in compile_info
+    print(weapon.a["class"])
+TypeError: 'NoneType' object is not subscriptable
+2021-02-22 21:51:28,347 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:51:28,731 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 88, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 58, in compile_info
+    print(weapon.a["class"])
+TypeError: 'NoneType' object is not subscriptable
+2021-02-22 21:51:59,283 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:51:59,662 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 85, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 56, in compile_info
+    if weapon.startsWith('<a class="image"'):
+TypeError: 'NoneType' object is not callable
+2021-02-22 21:52:20,008 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:52:20,410 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 86, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 56, in compile_info
+    print(weapon.startsWith('<a class="image"'))
+TypeError: 'NoneType' object is not callable
+2021-02-22 21:52:41,502 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:52:41,921 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 86, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 56, in compile_info
+    print(weapon.startswith('<a class="image"'))
+TypeError: 'NoneType' object is not callable
+2021-02-22 21:53:01,496 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:53:01,933 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 87, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 57, in compile_info
+    print(weapon.startswith('<a class="image"'))
+TypeError: 'NoneType' object is not callable
+2021-02-22 21:53:14,205 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:53:14,609 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 87, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 57, in compile_info
+    print(weapon.startswith('<a class="image"'))
+TypeError: 'NoneType' object is not callable
+2021-02-22 21:53:40,316 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:53:40,709 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 86, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 56, in compile_info
+    print(weapon["class"])
+  File "C:\Python38\lib\site-packages\bs4\element.py", line 1406, in __getitem__
+    return self.attrs[key]
+KeyError: 'class'
+2021-02-22 21:54:10,693 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:54:11,099 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 86, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 56, in compile_info
+    print(weapon["class"])
+  File "C:\Python38\lib\site-packages\bs4\element.py", line 1406, in __getitem__
+    return self.attrs[key]
+KeyError: 'class'
+2021-02-22 21:54:21,872 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:54:22,270 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 86, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 56, in compile_info
+    print(weapon["class"])
+  File "C:\Python38\lib\site-packages\bs4\element.py", line 1406, in __getitem__
+    return self.attrs[key]
+KeyError: 'class'
+2021-02-22 21:54:35,059 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:55:45,212 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:55:45,601 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 87, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 57, in compile_info
+    print(weapon["class"])
+  File "C:\Python38\lib\site-packages\bs4\element.py", line 1406, in __getitem__
+    return self.attrs[key]
+KeyError: 'class'
+2021-02-22 21:55:47,664 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:55:48,043 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 87, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 57, in compile_info
+    print(weapon["class"])
+  File "C:\Python38\lib\site-packages\bs4\element.py", line 1406, in __getitem__
+    return self.attrs[key]
+KeyError: 'class'
+2021-02-22 21:56:17,547 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 21:59:37,861 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 22:03:29,986 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 22:04:08,336 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 22:04:08,703 ERROR:Failed to crawl: https://monsterhunter.fandom.com/wiki/Assassin%27s_Dagger_(MHFU)
+Traceback (most recent call last):
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 85, in run
+    weapon = self.compile_info(url)
+  File "c:\Users\xaero\Documents\Coding stuff\python\scraper-2.py", line 56, in compile_info
+    if weapon["class"]:
+  File "C:\Python38\lib\site-packages\bs4\element.py", line 1406, in __getitem__
+    return self.attrs[key]
+KeyError: 'class'
+2021-02-22 22:05:18,161 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 22:05:40,675 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 22:08:10,439 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 22:09:36,524 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 22:10:07,415 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-22 22:10:59,831 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-23 09:30:28,032 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-23 09:32:59,755 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-23 09:33:24,250 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-23 09:40:06,890 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-23 09:40:24,510 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-23 09:42:54,846 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-23 09:43:21,319 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-23 09:46:35,317 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-23 10:01:39,714 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields
+2021-02-23 10:01:55,272 INFO:Crawling: https://monsterhunter.fandom.com/wiki/Category:MHFU_Swords_and_Shields

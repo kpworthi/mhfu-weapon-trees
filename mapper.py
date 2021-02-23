@@ -5,11 +5,15 @@ def recursion(item, pos):
   global grid
 
   i = 0
-  print(item["name"], pos)
+  #print(item["name"], pos)
 
+  # if starting a new weapon tree, move lowest row position down 1
+  if pos[0] == 0:
+    lowest_empty_row += 1
+    
   # end of branch condition
   if item["upgrade-to"] == "N/A":
-    print("No upgrades")
+    #print("No upgrades")
     grid[pos[1]][pos[0]] = "X"#item["name"]
     return True
 
@@ -27,13 +31,13 @@ def recursion(item, pos):
 
     # upgrade is not a sword and shield
     if next_weapon == "ds":
-      print(weapon, "is not s'n's")
+      #print(weapon, "is not s'n's")
       grid[next_cell[1]][next_cell[0]] = "O"#item["name"]+" (Dual Sword)
 
     else:
       recursion(next_weapon, next_cell)
 
-    print(i)
+    #print(i)
     i += 1
   
   # finally, add weapon to grid
@@ -47,59 +51,41 @@ def find_weapon_in_list(name):
       continue
   return "ds"
 
-rhandle     = open('mhfu data\\sns-data.txt', 'r')
+def find_branches():
+  starting_weapons = []
+  unique_weapons = []
+  g_weapons = []
+  for weapon in weapon_list:
+    if weapon["upgrade-from"] == "N/A" and weapon["upgrade-to"] == "N/A":
+      if weapon["name"].endswith("G"):
+        g_weapons.append(weapon["name"])
+      else:
+        unique_weapons.append(weapon["name"])
+    elif weapon["upgrade-from"] == "N/A":
+      starting_weapons.append(weapon)
+  return [starting_weapons, unique_weapons, g_weapons]
+
+# import the json file
+rhandle     = open('mhfu-weapon-trees\\sns-data.txt', 'r')
 weapon_list = json.load(rhandle)
 rhandle.close()
 
+# handler for eventual grid dump
 whandle = open('sns-map.txt', 'w')
 
+# initialize globals
 start_item        = weapon_list[69]
-current_pos       = [0,0]
-lowest_empty_row  = 1
+lowest_empty_row  = 0
 
-grid = [
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', '', '', '', '', '']
-]
+grid = []
+for x in range(49):
+  grid.append(['', '', '', '', '', '', '', '', '', '', '', ''])
 
-recursion(start_item, current_pos)
+result = find_branches()
+
+for starter in result[0]:
+  print(starter["name"])
+  recursion(starter, [0,lowest_empty_row])
+
 print(grid)
-
 whandle.close()

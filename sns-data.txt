@@ -865,28 +865,6 @@
     ]
   },
   {
-    "name": "Dual Chameleos",
-    "attack": "238",
-    "attribute": "Poison 190",
-    "affinity": "0%",
-    "sharpness": "BredToraMyelMgreTblu",
-    "slots": "OO-",
-    "bonus": "N/A",
-    "rarity": "8",
-    "create-cost": "N/A",
-    "create-mats": "N/A",
-    "upgrade-cost": "90000z",
-    "upgrade-mats": [
-      "Chameleos Spike x2",
-      "Chameleos Hide+ x6",
-      "Chameleos Jewel x1"
-    ],
-    "upgrade-from": "Rouge Flames",
-    "upgrade-to": [
-      "ChameleosDualBlades"
-    ]
-  },
-  {
     "name": "Dual Scissors",
     "attack": "378",
     "attribute": "Water 300",
@@ -2043,7 +2021,7 @@
     "upgrade-to": "N/A"
   },
   {
-    "name": "Millenium Knife",
+    "name": "Millennium Knife",
     "attack": "182",
     "attribute": "N/A",
     "affinity": "15%",
@@ -2606,28 +2584,6 @@
     "upgrade-to": [
       "Tigrex Sword",
       "Hidden Edge"
-    ]
-  },
-  {
-    "name": "Rouge Flames",
-    "attack": "210",
-    "attribute": "Poison 140",
-    "affinity": "0%",
-    "sharpness": "SredBoraSyelTgre",
-    "slots": "OO-",
-    "bonus": "N/A",
-    "rarity": "5",
-    "create-cost": "N/A",
-    "create-mats": "N/A",
-    "upgrade-cost": "10000z",
-    "upgrade-mats": [
-      "Chameleos Claw x4",
-      "Chameleos Tail x2",
-      "Chameleos Hide x6"
-    ],
-    "upgrade-from": "Deadly Poison",
-    "upgrade-to": [
-      "Dual Chameleos"
     ]
   },
   {

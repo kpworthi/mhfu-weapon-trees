@@ -1,7 +1,7 @@
 import json
 
-weapon_type_one = "sns"
-weapon_type_two = "db"
+weapon_type_one = "gl"
+weapon_type_two = "la"
 
 
 def recursion(item, pos, grid_num):
@@ -39,6 +39,7 @@ def recursion(item, pos, grid_num):
 
   # main loop, iterate over available upgrades
   for weapon in item["upgrade-to"]:
+    if weapon == "": continue # some kind of line break
     next_weapon = find_weapon_in_list(weapon)
 
     # assign the next cell, dropping a row if needed
@@ -48,8 +49,9 @@ def recursion(item, pos, grid_num):
       grids[grid_num][lowest_empty_row][pos[0]] = "+"
       next_cell = [pos[0]+1, lowest_empty_row]
       lowest_empty_row += 1
-  
+
     # upgrade is not the current weapon type
+    print(item)
     if next_weapon["type"] != item["type"]:
       grids[grid_num][next_cell[1]][next_cell[0]] = weapon + f' ({next_weapon["type"]})'
 
@@ -83,7 +85,10 @@ def find_branches(weapon_list):
         unique_weapons.append(weapon["name"])
     elif weapon["upgrade-from"] == "N/A":
       starting_weapons.append(weapon)
-    elif type(weapon["upgrade-from"]) is list: 
+    elif len(weapon["upgrade-from"]) == 1: # it's a list of one
+      if weapon_type_map[weapon["upgrade-from"][0]] != weapon["type"]:
+        from_alt_weapons.append(weapon)
+    elif type(weapon["upgrade-from"]) is list and len(weapon["upgrade-from"]) > 1: 
       if weapon_type_map[weapon["upgrade-from"][0]] != weapon["type"]:
         from_alt_weapons.append(weapon)
       if weapon_type_map[weapon["upgrade-from"][1]] != weapon["type"]:
@@ -143,14 +148,10 @@ while grids[1][len(grids[1])-1] == ['', '', '', '', '', '', '', '', '', '', '', 
   grids[1].pop()
 print(len(grids[1]), "is the new grid 1 length")
 
-with open(f'{weapon_type_one}-data.js', 'w') as file1:
-  file1.write(f'const {weapon_type_one}Data = {json.dumps(weapon_lists[0])}\nexport default {weapon_type_one}Data')
+with open(f'{weapon_type_one}-bundle.js', 'w') as file1:
+  total_string = f'const {weapon_type_one}Data = {json.dumps(weapon_lists[0])}\nconst {weapon_type_one}Map = {json.dumps(grids[0])}\nexport {{ {weapon_type_one}Data as default, {weapon_type_one}Map }}'
+  file1.write(total_string)
 
-with open(f'{weapon_type_two}-data.js', 'w') as file2:
-  file2.write(f'const {weapon_type_two}Data = {json.dumps(weapon_lists[1])}\nexport default {weapon_type_two}Data')
-
-with open(f'{weapon_type_one}-map.js', 'w') as file3:
-  file3.write(f'const {weapon_type_one}Map = {json.dumps(grids[0])}\nexport default {weapon_type_one}Map')
-
-with open(f'{weapon_type_two}-map.js', 'w') as file4:
-  file4.write(f'const {weapon_type_two}Map = {json.dumps(grids[1])}\nexport default {weapon_type_two}Map')
+with open(f'{weapon_type_two}-bundle.js', 'w') as file2:
+  total_string = f'const {weapon_type_two}Data = {json.dumps(weapon_lists[1])}\nconst {weapon_type_two}Map = {json.dumps(grids[1])}\nexport {{ {weapon_type_two}Data as default, {weapon_type_two}Map }}'
+  file2.write(total_string)

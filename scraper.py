@@ -7,15 +7,15 @@ import requests
 from bs4 import BeautifulSoup
 from bs4 import SoupStrainer
 
-weapon_one = 'SnS'
-weapon_two = 'DB'
-tree_link = 'https://monsterhunter.fandom.com/wiki/MHFU:_Sword_and_Shield_and_Dual_Blades_Weapon_Tree'
+weapon_one = 'GL'
+weapon_two = 'Lance'
+tree_link = 'https://monsterhunter.fandom.com/wiki/MHF2_and_MHFU:_Lance_and_Gunlance_Tree'
 if weapon_one == "DB": weapon_one = "DS" # wiki site uses 'ds' as the abbr instead of 'db'
 elif weapon_two == "DB": weapon_two = "DS"
 
 logging.basicConfig(
     filename=f'scrape-log.txt',
-    filemode='a',
+    filemode='w',
     format='%(asctime)s %(levelname)s:%(message)s',
     level=logging.INFO)
 
@@ -37,52 +37,79 @@ class Crawler:
         soup = BeautifulSoup(html, 'html.parser')
         rows = []
         for table in soup.find_all(class_="treetable"):
-          rows.extend(table.find_all('tr'))
+          cols = { "name": 0, "attack": 1, "attribute": 2, "sharpness": 3, "affinity": 4, "slots": 5, "bonus": 6, "rarity": 7, "notes": None, "shelling": None }
+          headers_checked = False;
+          rows = table.find_all('tr')
+          for row in rows:
+            if len(row.find_all('td')) == 1: # skip title rows or info rows
+              continue
+            elif row.find('a') == None and row('td')[0].get_text(strip=True) == "Weapon Name" and not headers_checked: # grab header info
+              col_num = 0
+              for header in row('td'):
+                if header.get_text(strip=True).lower() in cols:
+                  cols[header.get_text(strip=True).lower()] = col_num
+                col_num += 1
+              headers_checked = True
+              print(cols)
+              continue
+            elif row('td')[1].get_text(strip=True) == "": # ignore info rows
+              print('ignoring blank')
+              continue
+            elif row('a')[1].get_text(strip=True).startswith('Dummy'): # ignore 'Dummy' entries
+              continue
+            elif row.find_all('td')[0].find_all('a')[1].get_text(strip=True) in self.all_names: # skip duplicates
+              print("duplicate detected", row.find_all('td')[0].find_all('a')[1].get_text(strip=True))
+              continue
+            
+            cells = row.find_all('td')
+            current_weapon = {
+              "name": cells[cols["name"]].find_all('a')[1].get_text(strip=True),
+              "attack": cells[cols["attack"]].get_text(strip=True),
+              "element": cells[cols["attribute"]].get_text(strip=True),
+              "sharpness": self.parse_sharpness(cells[cols["sharpness"]].find_all("img")),
+              "affinity": cells[cols["affinity"]].get_text(strip=True),
+              "slots": cells[cols["slots"]].get_text(strip=True),
+              "bonus": cells[cols["bonus"]].get_text(strip=True),
+              "rarity": cells[cols["rarity"]].get_text(strip=True),
+            }
+            for prop in current_weapon: # Fill blanks
+              if current_weapon[prop] == "": current_weapon[prop] = 'N/A'
 
-        for row in rows:
-          if len(row.find_all('td')) == 1: # skip title rows 
-            continue
-          elif row.find('a') == None: # skip heading rows
-            continue
-          elif row('a')[1].get_text(strip=True).startswith('Dummy'): # ignore 'Dummy' entries
-            continue
-          elif row.find_all('td')[0].find_all('a')[1].get_text(strip=True) in self.all_names: # skip duplicates
-            print("duplicate detected", row.find_all('td')[0].find_all('a')[1].get_text(strip=True))
-            continue
-          
-          cells = row.find_all('td')
-          current_weapon = {
-            "name": cells[0].find_all('a')[1].get_text(strip=True),
-            "attack": cells[1].get_text(strip=True),
-            "element": cells[2].get_text(strip=True),
-            "sharpness": self.parse_sharpness(cells[3].find_all("img")),
-            "affinity": cells[4].get_text(strip=True),
-            "slots": cells[5].get_text(strip=True),
-            "bonus": cells[6].get_text(strip=True),
-            "rarity": cells[7].get_text(strip=True),
-          }
-          for prop in current_weapon: # Fill blanks
-            if current_weapon[prop] == "": current_weapon[prop] = 'N/A'
+            if cells[cols["attribute"]].find('img'): # If an image was used for an element rather than words
+              current_weapon["element"] = cells[cols["attribute"]].img["alt"].split('.')[0]+" "+current_weapon["element"]
 
-          weapon_link = cells[0].find_all('a')[1].get('href') # Grab link to use for getting materials
-          if weapon_link and weapon_link.startswith('/'):
-            weapon_link = urljoin(url, weapon_link)
-          current_weapon["link"] = weapon_link
+            if cols["notes"]: # adding notes for hunting horns
+              current_weapon["notes"] = self.parse_sharpness(cells[cols["notes"]].find_all("img"))
 
-          # match the weapon to the appropriate table and add the type to the object
-          if cells[0].find_all('a')[0].img['alt'] == f'{weapon_one}-Icon.png':
-            current_weapon["type"] = weapon_one.lower()
-            self.weapon_list_one.append(current_weapon)
-          elif cells[0].find_all('a')[0].img['alt'] == f'{weapon_two}-Icon.png':
-            current_weapon["type"] = weapon_two.lower()
-            self.weapon_list_two.append(current_weapon)
-          else: print("Weapon match failed!", current_weapon["name"])
+            if cols["shelling"]: # adding shelling for gunlances
+              current_weapon["shelling"] = cells[cols["shelling"]].get_text(strip=True)
+              print(cells[cols["shelling"]].get_text(strip=True))
 
-          self.all_names.append(current_weapon["name"])
-          
-          if current_weapon["type"] == "ds": current_weapon["type"] = "db" # once again fix db / ds issue
+            weapon_link = cells[0].find_all('a')[1].get('href') # Grab link to use for getting materials
+            if weapon_link and weapon_link.startswith('/'):
+              weapon_link = urljoin(url, weapon_link)
+            current_weapon["link"] = weapon_link
 
-          yield weapon_link
+            # match the weapon to the appropriate table and add the type to the object
+            if cells[0].find_all('a')[0].img['alt'] == f'{weapon_one}-Icon.png':
+              current_weapon["type"] = weapon_one.lower()
+              self.weapon_list_one.append(current_weapon)
+            elif cells[0].find_all('a')[0].img['alt'] == f'{weapon_two}-Icon.png':
+              current_weapon["type"] = weapon_two.lower()
+              self.weapon_list_two.append(current_weapon)
+            else: print("Weapon match failed!", current_weapon["name"])
+
+            self.all_names.append(current_weapon["name"])
+            
+            if current_weapon["type"] == "ds": current_weapon["type"] = "db" # once again fix db / ds issue
+            elif current_weapon["type"] == "hammer": current_weapon["type"] = "hm" # site does not abbreviate hammer
+            elif current_weapon["type"] == "lance": current_weapon["type"] = "la" # site does not abbreviate lance
+            if 'Shiny Rathalos Sword' in current_weapon["name"]: # broken links
+              current_weapon["link"] = "https://monsterhunter.fandom.com/wiki/Shiny_Rathalos_Sword_(MHFU)"
+            elif 'Striped Dragonga' in current_weapon["name"]:
+              current_weapon["link"] = "https://monsterhunter.fandom.com/wiki/Striped_Dragonga_(MHFU)"
+
+            yield weapon_link
 
     def get_addl_info(self, url, current_weapon, weapon_type):
         soup = BeautifulSoup(requests.get(url).text, 'html.parser')
@@ -90,20 +117,21 @@ class Crawler:
         failure = False
         # Format 1
         try:
-          a_list    = soup.find_all('a', string=re.compile('MHFU: '))    #couple extra hoops to jump through
-          table_two = a_list[len(a_list)-1].parent.parent.parent.parent #to make sure we get the right table
-          table_one = table_two.previous_sibling.previous_sibling
-          tables    = [table_one, table_two]
+          a_list    = soup.find_all('a', string=re.compile('MHFU: '))    # couple extra hoops to jump through
+          table_two = a_list[len(a_list)-1].parent.parent.parent.parent  # to make sure we get the right tables
+          main_table_list = soup.find_all('b', string="Description")
+          table_one = main_table_list[len(main_table_list)-1].parent.parent.parent.parent.parent
           table_one_rows = table_one.find_all("tr")
           table_two_rows = table_two.find_all("tr")
 
           current_weapon["create-cost"]  = table_one_rows[2].find_all("td")[2].get_text(strip=True)
           current_weapon["upgrade-cost"] = table_one_rows[2].find_all("td")[3].get_text(strip=True)
-          if len(tables[1].find_all("tr")[2].find_all("td")[0].find_all('a')) > 1:
-            current_weapon["upgrade-from"] = [
-              table_two_rows[2].find_all("td")[0].find_all('a')[0].get_text(strip=True),
-              table_two_rows[2].find_all("td")[0].find_all('a')[1].get_text(strip=True),
-            ]
+          upgrade_links = table_two_rows[2].find_all("td")[0].find_all('a')
+          if len(upgrade_links) > 1:
+            current_weapon["upgrade-from"] = []
+            for link in upgrade_links:
+              if not link.has_attr('class') or link['class'] != ['image']: # make sure not to add image links to the array, resulting in empty entries
+                current_weapon["upgrade-from"].append( link.get_text(strip=True) )
             #print('double origin', current_weapon["upgrade-from"])
           else:
             current_weapon["upgrade-from"] = table_two_rows[2].find_all("td")[0].get_text(strip=True)
@@ -131,6 +159,7 @@ class Crawler:
 
               else: # otherwise do the weapon's next upgrades by finding 'a' elements
                 for weapon in current_area.find_all('a'):
+                  if not weapon.has_attr('class') or weapon['class'] != ['image']: # make sure not to add image links to the array, resulting in empty entries
                     current_weapon["upgrade-to"].append( weapon.get_text(strip=True) )
         except:
           logging.exception(f'Format 1 failed on: {url}')
@@ -177,9 +206,9 @@ class Crawler:
             print("Format 2 failed on", current_weapon["link"])
             failure = True
 
-        # "None" fixer for consistency
+        # "None" and "-" fixer for consistency
         for key in current_weapon:
-          if current_weapon[key] == "None":
+          if "???" in current_weapon[key] or "None" in current_weapon[key] or current_weapon[key] == "-":
             current_weapon[key] = "N/A"
 
         # sometimes items are listed as 'upgrade only' by site when they are instead 'create only', swap if true
@@ -190,7 +219,7 @@ class Crawler:
           current_weapon["upgrade-mats"] = "N/A"
 
         # if it's a dual blade double element, put spaces around the slash
-        if "/" in current_weapon["element"]: 
+        if "/" in current_weapon["element"] and current_weapon["element"] != "N/A": 
           current_weapon["element"] = " / ".join(current_weapon["element"].split("/"))
 
         if "Millenium Knife" in current_weapon["name"]:
@@ -205,6 +234,7 @@ class Crawler:
         sharpness_string = ""
         for image in image_list:
             sharpness_string = sharpness_string + image['alt'][0:-4]
+        if sharpness_string == "": sharpness_string = "Unknown" # site does not have data on sharpness, try to find manually
         return sharpness_string
 
     def run(self):
@@ -246,6 +276,10 @@ class Crawler:
         #change ds back to db for consistency
         if weapon_one == "DS": weapon_one = "DB"
         elif weapon_two == "DS": weapon_two = "DB"
+        elif weapon_one == "Hammer": weapon_one = "HM"
+        elif weapon_two == "Hammer": weapon_two = "HM"
+        elif weapon_one == "Lance": weapon_one = "LA"
+        elif weapon_two == "Lance": weapon_two = "LA"
         fhandle = open(f'{weapon_one.lower()}-{weapon_two.lower()}-data.json', 'w')
         fhandle.write(json.dumps(total_weapons))
         fhandle.close()

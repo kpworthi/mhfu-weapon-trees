@@ -1,8 +1,6 @@
 import json
-
-weapon_type_one = "gl"
-weapon_type_two = "la"
-
+import sys
+import getopt
 
 def recursion(item, pos, grid_num):
   global lowest_empty_row
@@ -97,61 +95,101 @@ def find_branches(weapon_list):
       from_alt_weapons.append(weapon)
   return [starting_weapons, from_alt_weapons, unique_weapons, g_weapons]
 
-# import the json file
-try:
-  rhandle      = open(f'{weapon_type_one}-{weapon_type_two}-data.json', 'r')
-except:
-  rhandle      = open(f'{weapon_type_two}-{weapon_type_one}-data.json', 'r')
-weapon_lists = json.load(rhandle)
-rhandle.close()
+def main(argv):
+  weapon_type_one = ''
+  weapon_type_two = ''
 
-# initialize globals
-lowest_empty_row  = 0
-weapon_type_map   = {}
-total_list = weapon_lists[0].copy()
-total_list.extend(weapon_lists[1])
+  # Handle options
+  try:
+    opts, args = getopt.getopt(argv,"ha:b:",["type1=","type2="])
+  except getopt.GetoptError:
+    print('mapper.py --type1 <type> --type2 <type>')
+    sys.exit(2)
+  for opt, arg in opts:
+    if opt == '-h':
+        print('mapper.py -a <type> -b <type>')
+        print('mapper.py --type1 <type> --type2 <type>')
+        print(
+'''
+Use lower case only for types
+Types are:
+sns : Sword and Shield
+db  : Dual Blades
+gs  : Great Sword
+ls  : Long Sword
+hm  : Hammer
+hh  : Hunting Horn
+gl  : Gunlance
+la  : Lance
 
-# create quick reference for each weapon's type
-for weapon in total_list:
-  weapon_type_map[ weapon["name"] ] = weapon["type"]
+Scraper must have been previously run in the same folder, or at least have related
+data file in the same folder.
+'''
+        )
+        sys.exit()
+    elif opt in ("-a", "--type1"):
+        weapon_type_one = arg
+    elif opt in ("-b", "--type2"):
+        weapon_type_two = arg
 
-grids = [ [],[] ]
-for x in range(100):
-  grids[0].append(['', '', '', '', '', '', '', '', '', '', '', ''])
-for x in range(100):
-  grids[1].append(['', '', '', '', '', '', '', '', '', '', '', ''])
+  # import the json file
+  try:
+    rhandle      = open(f'{weapon_type_one}-{weapon_type_two}-data.json', 'r')
+  except:
+    rhandle      = open(f'{weapon_type_two}-{weapon_type_one}-data.json', 'r')
+  weapon_lists = json.load(rhandle)
+  rhandle.close()
 
-result_one = find_branches(weapon_lists[0])
-result_two = find_branches(weapon_lists[1])
+  # initialize globals
+  lowest_empty_row  = 0
+  weapon_type_map   = {}
+  total_list = weapon_lists[0].copy()
+  total_list.extend(weapon_lists[1])
+
+  # create quick reference for each weapon's type
+  for weapon in total_list:
+    weapon_type_map[ weapon["name"] ] = weapon["type"]
+
+  grids = [ [],[] ]
+  for x in range(100):
+    grids[0].append(['', '', '', '', '', '', '', '', '', '', '', ''])
+  for x in range(100):
+    grids[1].append(['', '', '', '', '', '', '', '', '', '', '', ''])
+
+  result_one = find_branches(weapon_lists[0])
+  result_two = find_branches(weapon_lists[1])
 
 
-for starter in result_one[0]:
-  recursion(starter, [0,lowest_empty_row], 0)
+  for starter in result_one[0]:
+    recursion(starter, [0,lowest_empty_row], 0)
 
-for alt_start in result_one[1]:
-  recursion(alt_start, [0,lowest_empty_row], 0)
+  for alt_start in result_one[1]:
+    recursion(alt_start, [0,lowest_empty_row], 0)
 
-lowest_empty_row = 0
+  lowest_empty_row = 0
 
-for starter in result_two[0]:
-  recursion(starter, [0,lowest_empty_row], 1)
-for alt_start in result_two[1]:
-  recursion(alt_start, [0,lowest_empty_row], 1)
+  for starter in result_two[0]:
+    recursion(starter, [0,lowest_empty_row], 1)
+  for alt_start in result_two[1]:
+    recursion(alt_start, [0,lowest_empty_row], 1)
 
 
-# clip the grids
-while grids[0][len(grids[0])-1] == ['', '', '', '', '', '', '', '', '', '', '', '']:
-  grids[0].pop()
-print(len(grids[0]), "is the new grid 0 length")
+  # clip the grids
+  while grids[0][len(grids[0])-1] == ['', '', '', '', '', '', '', '', '', '', '', '']:
+    grids[0].pop()
+  print(len(grids[0]), "is the new grid 0 length")
 
-while grids[1][len(grids[1])-1] == ['', '', '', '', '', '', '', '', '', '', '', '']:
-  grids[1].pop()
-print(len(grids[1]), "is the new grid 1 length")
+  while grids[1][len(grids[1])-1] == ['', '', '', '', '', '', '', '', '', '', '', '']:
+    grids[1].pop()
+  print(len(grids[1]), "is the new grid 1 length")
 
-with open(f'{weapon_type_one}-bundle.js', 'w') as file1:
-  total_string = f'const {weapon_type_one}Data = {json.dumps(weapon_lists[0])}\nconst {weapon_type_one}Map = {json.dumps(grids[0])}\nexport {{ {weapon_type_one}Data as default, {weapon_type_one}Map }}'
-  file1.write(total_string)
+  with open(f'{weapon_type_one}-bundle.js', 'w') as file1:
+    total_string = f'const {weapon_type_one}Data = {json.dumps(weapon_lists[0])}\nconst {weapon_type_one}Map = {json.dumps(grids[0])}\nexport {{ {weapon_type_one}Data as default, {weapon_type_one}Map }}'
+    file1.write(total_string)
 
-with open(f'{weapon_type_two}-bundle.js', 'w') as file2:
-  total_string = f'const {weapon_type_two}Data = {json.dumps(weapon_lists[1])}\nconst {weapon_type_two}Map = {json.dumps(grids[1])}\nexport {{ {weapon_type_two}Data as default, {weapon_type_two}Map }}'
-  file2.write(total_string)
+  with open(f'{weapon_type_two}-bundle.js', 'w') as file2:
+    total_string = f'const {weapon_type_two}Data = {json.dumps(weapon_lists[1])}\nconst {weapon_type_two}Map = {json.dumps(grids[1])}\nexport {{ {weapon_type_two}Data as default, {weapon_type_two}Map }}'
+    file2.write(total_string)
+
+if __name__ == '__main__':
+  main(sys.argv[1:])
